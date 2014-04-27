@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+			var socket = io.connect('/');
+		</script>
+		<title id="page-title">Sonos Web Controller</title>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="styles/css/main.css" />
+		<link id="favicon" rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	</head>
+<body>
+
+	<div class="m-background-init"></div>
+	<div class="m-background" id="now-playing-background"></div>
+
+	<div id="now-playing" class="m-nowPlaying">
+		<div class="m-currentTrack">
+			<div class="track-content">
+				<img src="" id="current-track-art">
+				<div id="current-track-title" class="title"></div>
+				<div id="current-track-artist" class="artist"></div>
+				<div id="current-track-album" class="album"></div>
+			</div>
+		</div>
+		<div class="m-nextTrack">
+			<h2>Next track</h2>
+			<img src="" id="next-track-art">
+			<div id="next-track-title"></div>
+			<div id="next-track-artist"></div>
+			<div id="next-track-album"></div>
+		</div>
+	</div>
+
+	<script src="js/jquery-2.1.0.min.js"></script>
+	<script src="js/now-playing.js"></script>
+</body>
+</html>
